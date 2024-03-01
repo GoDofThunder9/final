@@ -1,0 +1,8 @@
+<%- include("./_header.ejs")%>
+<h1>Sign In</h1>
+<form action="/create-session" method="post">
+    <input type="text" name="email" placeholder="email" required>
+    <input type="text" name="password" placeholder="password" required>
+    <button type="submit">submit</button>
+    </form>
+<%- include("./_footer.ejs")%>

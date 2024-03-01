@@ -1,0 +1,18 @@
+<%- include("./_header.ejs")%>
+        <link rel="stylesheet" href="/css/user_profile.css">
+        <h1>
+            Codeial / Profile Page
+        </h1>
+        <h1>
+            <% if(locals.user) {%>
+             <li><%= user.email %></li>
+             <li>
+                <a href="/sign-out">sign out</a>
+             </li>
+            <% }else{ %>
+                <li><a href="/sign-in"> sign in</a></li>
+                <li><a href="/sign-up">sign out</a></li>
+            <% } %>
+        </h1>
+<%- include("./_footer.ejs")%>
+

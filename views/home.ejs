@@ -1,0 +1,12 @@
+        <h1>
+            Codeial / <%= title %>
+        </h1>
+        <% if(locals.user) {%>
+            <li><%= user.email %></li>
+            <li>
+               <a href="/sign-out">sign out</a>
+            </li>
+           <% }else{ %>
+               <li><a href="/sign-in"> sign in</a></li>
+               <li><a href="/sign-up">sign up</a></li>
+           <% } %>
