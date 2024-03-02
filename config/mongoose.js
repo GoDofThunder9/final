@@ -6,7 +6,7 @@ useUnifiedTopology: true,
 }
 )
 .then (()=>{
-console.log("connection is established");
+console.log("connection is established with the database");
 })
 .catch((error)=>{
     console.error("faied to connect to databse");
