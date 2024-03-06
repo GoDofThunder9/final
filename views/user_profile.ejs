@@ -1,18 +1,20 @@
 <%- include("./_header.ejs")%>
-        <link rel="stylesheet" href="/css/user_profile.css">
-        <h1>
-            Codeial / Profile Page
-        </h1>
-        <h1>
-            <% if(locals.user) {%>
-             <li><%= user.email %></li>
-             <li>
-                <a href="/sign-out">sign out</a>
-             </li>
-            <% }else{ %>
-                <li><a href="/sign-in"> sign in</a></li>
-                <li><a href="/sign-up">sign out</a></li>
-            <% } %>
-        </h1>
+<link rel="stylesheet" type="text/css" href="/Profile.css">
+<div class="navbar">
+    <h3>Codeial-Profile</h3>
+    <% if(locals.user) {%>
+      <div class="detail">
+        <li><a href="/">Home</a></li>
+        <li><a href="#"><%= user.name %></a></li>
+        <li><a href="/sign-out">Sign Out</a></li>
+        <% }else{ %>
+          <div class="detail">
+            <li><a href="/sign-in"> Sign In</a></li>
+            <li><a href="/sign-up">Sign Up</a></li>
+          </div>
+          <% } %>
+      </div>
+    </div>
+    <h1><%= user.email %></h1>
 <%- include("./_footer.ejs")%>
 

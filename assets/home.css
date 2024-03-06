@@ -1,0 +1,29 @@
+.navbar
+{   
+    display: flex;
+    flex-flow: row;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+.navbar h3
+{
+    display: block;
+    width: 1000px;
+    color: aqua;
+    border-radius: 10px;
+    margin: 20px;
+}
+.detail
+{   width: 290px;
+    margin-top: 20px ;
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.detail li a
+{   
+    padding: 10px;
+    color: aqua;
+}

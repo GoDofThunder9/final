@@ -13,6 +13,7 @@
   "author": "CodingNinjas",
   "license": "ISC",
   "dependencies": {
+    "connect": "^3.7.0",
     "connect-mongo": "^5.1.0",
     "cookie": "^0.6.0",
     "cookie-parser": "^1.4.6",
@@ -23,6 +24,7 @@
     "git": "^0.1.5",
     "mongod": "^2.0.0",
     "mongoose": "^5.13.22",
+    "node-sass-middleware": "^1.1.0",
     "nodemon": "^3.1.0",
     "parser": "^0.1.4",
     "passport": "^0.7.0",

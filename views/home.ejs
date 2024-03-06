@@ -1,12 +1,26 @@
-        <h1>
-            Codeial / <%= title %>
-        </h1>
-        <% if(locals.user) {%>
-            <li><%= user.email %></li>
-            <li>
-               <a href="/sign-out">sign out</a>
-            </li>
-           <% }else{ %>
-               <li><a href="/sign-in"> sign in</a></li>
-               <li><a href="/sign-up">sign up</a></li>
-           <% } %>
+<%- include("./_header.ejs")%>
+<link rel="stylesheet" type="text/css" href="/home.css">
+<div class="navbar">
+      <h3>Codeial</h3>
+      <% if(locals.user) {%>
+        <div class="detail">
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="#"><%= user.name %></a></li>
+          <li><a href="/sign-out">Sign Out</a></li>
+          <% }else{ %>
+            <div class="detail">
+              <li><a href="/sign-in"> Sign In</a></li>
+              <li><a href="/sign-up">Sign Up</a></li>
+            </div>
+            <% } %>
+        </div>
+  </div>
+        <section id="feed-posts">
+          <h4>Post</h4>
+          <form action="" id="new-post-form" method="post">
+            <textarea name="content"  cols="30" rows="3"></textarea>
+            <input type="submit" value="Post">
+          </form>
+        </section>
+  
+<%- include("./_footer.ejs")%>
