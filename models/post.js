@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const User = require("./user");
+const user = require("./user");
 const postSchema = new mongoose.Schema(
     {
         content:
@@ -6,10 +8,10 @@ const postSchema = new mongoose.Schema(
              type: String,
              require: true,
         },
-        User:  
+        uuser:  
         {
             type : mongoose.Schema.Types.ObjectId,
-            require:true,
+            ref: User,
         }
     },
     {
@@ -17,4 +19,4 @@ const postSchema = new mongoose.Schema(
     }
 );
 const Post = mongoose.model('Post',postSchema);
-module.exports = post;
+module.exports = Post;

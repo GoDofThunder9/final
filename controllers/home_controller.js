@@ -1,11 +1,16 @@
 const User = require('../models/user')
+const post = require('../models/post')
 const mongoose = require('mongoose');
 const express = require('express');
 module.exports.home = function(req, res){
-    
-    return res.render('home', {
-        title: "Home"
-    });
+    post.find({}).populate('uuser').exec(function(err,Post)
+    {
+        return res.render('home', {
+            title: "Home",
+            posts: Post
+        });
+    }
+    )
 }
 module.exports.profile = function(req, res){
     return res.render('user_profile', {

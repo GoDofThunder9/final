@@ -27,3 +27,18 @@
     padding: 10px;
     color: aqua;
 }
+.container
+{
+    margin: 10px;
+    padding: 20px;
+}
+.container ul li p 
+{
+    color: black;
+    font-weight: bold;
+}
+.container ul li small
+{
+   color: darkred;
+   font-size: small;
+}

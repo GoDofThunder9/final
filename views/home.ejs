@@ -16,11 +16,25 @@
         </div>
   </div>
         <section id="feed-posts">
-          <h4>Post</h4>
-          <form action="" id="new-post-form" method="post">
-            <textarea name="content"  cols="30" rows="3"></textarea>
-            <input type="submit" value="Post">
-          </form>
+          <% if (locals.user){%>
+            <h4>Post</h4>
+            <form action="/posts/create" id="new-post-form" method="post">
+              <textarea name="content"  cols="30" rows="3"></textarea>
+              <input type="submit" value="Post">
+            </form>
+            <%} %>
         </section>
+        <div class="container">
+          <ul>
+            <% for(  Post of posts)
+            {%>
+              <li>
+                <p><%= Post.content %></p>
+                <small><%= Post.uuser.name %></small>  
+             </li>
+            <%}
+            %>
+          </ul>
+        </div>
   
 <%- include("./_footer.ejs")%>
