@@ -1,29 +1,82 @@
-.navbar
-{   
-    display: flex;
-    flex-flow: row;
-    background-color: rgb(29, 29, 29);
-    border-radius: 10px;
-}
-.navbar h3
-{
+img{
+    border-radius: 70px;
     display: block;
-    width: 1000px;
-    color: aqua;
-    border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    margin-top: 100px;
 }
-.detail
-{   width: 290px;
-    margin-top: 20px ;
+.profile_image
+{
+ transform: scale(3);
+ border-radius: 0px;
+}
+h3{
+    margin: 10px;
     display: flex;
-    justify-content: end;
-    list-style: none;
+    justify-content: center;
+    text-align: center;
+}
+button{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 3px;
+    width: 50px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+#FORM
+{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 45%;
+    left: 33%;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 3px black;
+    color: white;
+}
+.submit{
+    display: block;
+    width: 60px;
+    height: 35px;
+    margin-left: 160px;
+    color: black;
+    border-radius: 5px;
+    background-color: burlywood;
+    font-size: small;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    margin-top: 10px;
 }
-.detail li a
-{   
-    padding: 10px;
-    color: aqua;
+.submit:hover{
+   background-color:  rgb(255, 176, 72);
+}
+.input
+{
+    width: 300px;
+    margin: 10px;
+    height: 40px;
+    margin-left: 12%;
+    border-radius: 5px;
+    opacity: 1;
+    background-color: transparent;
+    font-weight:400;
+    filter: contrast(8px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+::placeholder{
+    color: black;
+    font-size: medium;
 }

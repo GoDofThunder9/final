@@ -1,8 +1,16 @@
-<%- include("./_header.ejs")%>
-<h1>Sign In</h1>
-<form action="/create-session" method="post">
-    <input type="text" name="email" placeholder="email" required>
-    <input type="text" name="password" placeholder="password" required>
-    <button type="submit">submit</button>
+<link rel="stylesheet" href="/sign_in.css">
+<% if(flash.success && flash.success.length >0) 
+    {%>
+      <h5> <%= flash.success %> </h5>
+    <%}
+    %>
+    <div class="background">
+      <!-- Blurred Background Image -->
+      <img src="./img/signin1.jpg" alt="Background Image" height="830px" width="1350px">
+  </div>
+<form action="/create-session" method="post" id="sign-in-form">
+  <h3> SIGN-IN</h3>
+    <input class="input" type="text" name="email" placeholder="Email" required>
+    <input class="input" type="text" name="password" placeholder="Password" required>
+    <button class="submit">Log In</button>
     </form>
-<%- include("./_footer.ejs")%>

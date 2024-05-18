@@ -1,20 +1,40 @@
-<%- include("./_header.ejs")%>
 <link rel="stylesheet" type="text/css" href="/Profile.css">
-<div class="navbar">
-    <h3>Codeial-Profile</h3>
-    <% if(locals.user) {%>
-      <div class="detail">
-        <li><a href="/">Home</a></li>
-        <li><a href="#"><%= user.name %></a></li>
-        <li><a href="/sign-out">Sign Out</a></li>
-        <% }else{ %>
-          <div class="detail">
-            <li><a href="/sign-in"> Sign In</a></li>
-            <li><a href="/sign-up">Sign Up</a></li>
-          </div>
-          <% } %>
-      </div>
-    </div>
-    <h1><%= user.email %></h1>
-<%- include("./_footer.ejs")%>
-
+<link rel="stylesheet" type="text/css" href="/home.css"/>
+<% if(user.id == profile_user._id)
+{%>
+    <img  src="<%= user.avatar %>" alt="<%= user.name %>" height="100px" width="100px">
+    <h3><%= profile_user.name %></h3>
+    <button onclick="myFunction()">Edit</button>
+    <form id="FORM" action="/update/<%= profile_user.id %>" enctype="multipart/form-data" method="post">
+      <input class="input" type="text" name="name" placeholder="your name" value="<%= profile_user.name %>" required>
+      <input class="input" type="text" name="email" placeholder="your email" value="<%= profile_user.email %>" required>
+      <input class="input" type="file" name="avatar" placeholder="profile_picture">
+      <input class="submit" type="submit" value="update">
+    </form>
+    <div id="post-list-container">
+      <ul>
+   <% for( Post of Post)
+   {%>
+     <% if(Post.uuser._id == user.id)
+     {%>
+       <%- include('_post'); %>
+       <%- include('_comment'); %>
+       <%}
+       %>
+       <%} %>
+     </ul>
+ </div>
+   <script src="js/toogle_like.js"></script>
+   <script>
+     $('.toggle-like-button').each(function(){
+       let self = this;
+       let toggleLike = new ToggleLike(self);
+     });
+     </script>
+    <%}
+    else
+    {%>
+      <h1><%= profile_user.email %></h1>
+      <h1><%= profile_user.name %></h1>
+      <%}
+      %>

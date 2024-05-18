@@ -1,0 +1,39 @@
+<!-- <div class="post-comment" id="comment-form-<%= Post._id %>">
+  <% if(locals.user){%>
+    <form class="comment-input" id="new-comment-form" action="/comment/create"  method="post">
+      <input type="text" name="content" placeholder="type here to add comments" required/>
+      <input type="hidden" name="Post" value="<%= Post._id %>"/>
+      <input type="submit" value="Add Comment" />
+    </form>
+<div id="post-comment-list">
+    <ul id="post-comment-<%= Post._id%>" class="post-toggle">
+      <li id="comment-<% Post._id%>" style="list-style: none;">
+        <% for(comment of Post.comments){%>
+          <p><% if (locals.user && locals.user.id == comment.user._id) {%>
+            <a class="delete-post-button" href="/comment/destroy/<%= comment.id %>"><i class="fa-solid fa-rectangle-xmark"></i></a>
+            <%} %> 
+            <div class="comment-box">   
+              
+              <small class="comment-content"><%= comment.content %> </small>
+              <small class="comment-name"><%= comment.user.name %>  </small>
+            </div>
+            <small>
+              
+              <% if(locals.user) 
+              {%>
+                <a style="text-decoration: none;" class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id %>&type=comment"> <%= comment.likes.length %> <i id="toggle-comment-<%= Post._id %>" class="fa-regular fa-heart " style="color: red;" style="margin-left: 4px;"></i>  </a>
+                <%} else 
+                {%>
+                  <%= comment.likes.length %> <i class="fa-regular fa-heart" style="color: red;" style="margin-left: 4px;"></i>
+                  <%}
+                  %>
+                  <small class="timestamp"><%= comment.createdAt %>  </small>
+                </small>
+                <%} %>
+              </p>
+            </li>
+        
+  </div>
+</div>
+</li>
+<%}%> -->

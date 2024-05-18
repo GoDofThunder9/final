@@ -1,17 +1,5 @@
-.navbar
-{   
-    display: flex;
-    flex-flow: row;
-    background-color: rgb(29, 29, 29);
-    border-radius: 10px;
-}
-.navbar h3
-{
-    display: block;
-    width: 1000px;
-    color: aqua;
-    border-radius: 10px;
-    margin: 20px;
+html{
+  scroll-behavior: smooth;
 }
 .detail
 {   width: 290px;
@@ -27,11 +15,6 @@
     padding: 10px;
     color: aqua;
 }
-.container
-{
-    margin: 10px;
-    padding: 20px;
-}
 .container ul li p 
 {
     color: black;
@@ -41,4 +24,116 @@
 {
    color: darkred;
    font-size: small;
+}
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0px;
+    background-image: url(img/whats.jpeg);
+  }
+  
+  /* Container styles */
+  #feed-posts {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Heading styles */
+  #feed-posts h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form styles */
+  #new-post-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #new-post-form textarea {
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  #new-post-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #66A5AD;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #new-post-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .navbar-div{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+  }
+   #post-list-container ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+#container-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed */   /* Light gradient background */
+}
+/* Content header */
+.content-header {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-header h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+.content-header p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555555; /* Slightly darker text color */
+}
+
+/* Image header */
+.image-header {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.image-header img {
+  width: 843px;
+  height: auto;
+  margin-top: 0px;
+}
+
+/* Decorative effect for the main text */
+.content-header h2::after {
+  content: '';
+  display: block;
+  width: 80%;
+  height: 3px;
+  background-color: #333; /* Dark line color */
+  margin: 15px auto;
 }

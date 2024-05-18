@@ -1,0 +1,23 @@
+<li id="post-<%= Post._id %>" style="list-style-type: none;" >
+    <div id="post-whole-container" class="post-card"> 
+      <div class="post-container">
+        <% if(locals.user && locals.user.id == Post.uuser.id) {%>
+          <small><a class="delete-post-button" href="/posts/destroy/<%= Post.id%>"><i class="fa-solid fa-rectangle-xmark"></i></a></small>
+          <%} %>
+          <img src='<%= Post.uuser.avatar %>' alt="not loaded">
+          <div class="post-content" >"<%= Post.content %>"</div>
+          <a id="Read-More" href="/posts/page/<%= Post.id %>"> Read More</a>
+        </div>
+        <small id="like-comment">
+          <% if(locals.user) 
+          {%>
+            <a class="toggle-like-button" data-likes="<%= Post.likes.length %>" href="/likes/toggle/?id=<%=Post.id%>&type=Post"> <%= Post.likes.length %> <i class="fa-solid fa-heart" style="color: red;"></i></a>
+            <%} else 
+            {%>
+              <%= Post.likes.length %> <i class="fa-solid fa-heart"></i>
+              <%} %>
+              <i class="fa-regular fa-comment toggle-comment" id="toggle-comment-<%= Post._id %>" data-post-id="<%= Post._id %>" style="margin-left: 4px;"></i>
+            </small>
+            <small class="post-user">:-<%= Post.uuser.name %></small>
+          </p>
+          

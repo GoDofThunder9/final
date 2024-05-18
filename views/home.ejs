@@ -1,40 +1,89 @@
-<%- include("./_header.ejs")%>
-<link rel="stylesheet" type="text/css" href="/home.css">
-<div class="navbar">
-      <h3>Codeial</h3>
-      <% if(locals.user) {%>
-        <div class="detail">
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="#"><%= user.name %></a></li>
-          <li><a href="/sign-out">Sign Out</a></li>
-          <% }else{ %>
-            <div class="detail">
-              <li><a href="/sign-in"> Sign In</a></li>
-              <li><a href="/sign-up">Sign Up</a></li>
-            </div>
-            <% } %>
-        </div>
+<link rel="stylesheet" type="text/css" href="/home.css" />
+<link rel="stylesheet" type="text/css" href="/chat.css" />
+<link rel="stylesheet" type="text/css" href="/post.css">
+<container id="container-header">
+  <div class="content-header">
+     <p>
+      Hello! Welcome to
+      <h2> LinkLeaf </h2>
+      Bloging is conversation</p>
   </div>
-        <section id="feed-posts">
-          <% if (locals.user){%>
-            <h4>Post</h4>
-            <form action="/posts/create" id="new-post-form" method="post">
-              <textarea name="content"  cols="30" rows="3"></textarea>
-              <input type="submit" value="Post">
-            </form>
-            <%} %>
-        </section>
-        <div class="container">
-          <ul>
-            <% for(  Post of posts)
-            {%>
-              <li>
-                <p><%= Post.content %></p>
-                <small><%= Post.uuser.name %></small>  
-             </li>
-            <%}
-            %>
-          </ul>
+  <div class="image-header">
+    <img src="./img/header.jpg" alt="not loaded" srcset="">
+  </div>
+</container >
+<section id="feed-posts">
+    <% if (locals.user){%>
+    <h4>Post</h4>
+    <form action="/posts/create" id="new-post-form" method="post">
+      <textarea name="content" cols="30" rows="3"></textarea>
+      <input type="submit" value="Post"/>
+    </form>
+    <%} %> 
+  </section>
+  <div id="post-list-container">
+    <ul>
+      <% for( Post of posts) {%>
+        <%- include('_post'); %>
+        <%- include('_comment'); %>
+        <%} %>
+    </ul>
+   </div>
+   <img src="/img/light.jpg" alt="" srcset="" height="500px" width="804px" style="margin-top: 30px;">
+   <script src="js/toogle_like.js"></script>
+   <script>
+    $('.toggle-like-button').each(function(){
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+  </script>
+ <!-- chat box  -->
+<!-- CHANGE :: Creat the code for chat box -->
+<% if (locals.user){ %>
+  <%- include('_chatbox'); %>
+<% } %>
+<%- include('_friends.ejs'); %>
+<header>
+  <h2>Contact Us</h2>
+</header>
+<form id="contact-form" action="/submit-contact-form" method="POST">
+  <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+<link rel="stylesheet" href="/footer.css">
+<footer class="site-footer">
+    <div class="containers">
+        <div class="footer-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
         </div>
-  
-<%- include("./_footer.ejs")%>
+        <div class="social-icons">
+            <a href="#"><img src="/img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="/img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="/img/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Your Social Media App. All rights reserved.</p>
+    </div>
+</footer>

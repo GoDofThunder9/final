@@ -1,0 +1,78 @@
+/* Styling for Friend Section */
+#user-friends {
+    width: 200px;
+    height: 500px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 10%;
+    left: 10px;
+    transition: all 0.3s ease;
+}
+
+#user-friends:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Friend Section Heading */
+#user-friends h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styling for Each Friend Link */
+#user-friends p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+#user-friends a {
+    display: block;
+    padding: 12px;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+#user-friends a:hover {
+    background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
+    color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#user-friends a:active {
+    background: linear-gradient(135deg, #d0d0d0, #c0c0c0);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #user-friends {
+        width: 100%;
+        max-width: 300px;
+        position: static;
+        margin: 0 auto;
+    }
+    
+    #user-friends h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    #user-friends a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

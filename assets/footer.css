@@ -1,0 +1,137 @@
+header h2 {
+    margin: 0px 200px;
+    font-size: 2rem;
+    
+}
+/* Contact Form Section */
+.contact-form-section {
+    padding: 1rem;
+}
+#contact-form{
+    margin: 0px 160px;
+    padding: 5px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+
+
+
+
+/* Styles for the site footer */
+.site-footer {
+    background-color: white; /* Dark background color */
+    color: grey; /* Text color */
+    padding: 0px 0; /* Padding at the top and bottom */
+    font-family: Arial, sans-serif; /* Font family for text */
+    margin: 0px 192px;
+    margin-top: 100px;
+}
+.container {
+    max-width: 1200px; /* Maximum width of content */
+    margin: 0 auto; /* Center align content */
+    padding: 0 20px; /* Add padding to container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the content */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Styles for the footer links */
+.footer-links ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between items */
+}
+
+.footer-links ul li a {
+    color: grey; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size */
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styles for social icons */
+.social-icons a {
+    display: inline-block; /* Display icons inline */
+    margin-right: 10px; /* Add spacing between icons */
+}
+
+.social-icons img {
+    width: 30px; /* Set width of icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for copyright notice */
+.copyright {
+    text-align: center; /* Center align text */
+    margin-top: 20px; /* Add space at the top */
+    font-size: 14px; /* Font size */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-links ul li {
+        display: block; /* Display list items vertically */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .social-icons a {
+        margin-right: 0; /* Remove right margin for icons */
+        margin-bottom: 10px; /* Add spacing between icons */
+    }
+}

@@ -1,0 +1,58 @@
+input[type="text"][name="content"] {
+    width: 600px;
+    margin-left: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    font-family: serif;
+    color: darkslateblue;
+}
+.comment-input
+{
+    margin-top: 10px;
+}
+.comment-box
+{
+    padding: 3px;
+    border: 1px solid #fa6464;
+    background: #faf7d7;
+    overflow-wrap: break-word; /* Alternative property for word wrapping */
+    white-space: normal;
+    border-radius: 3px;
+    margin-right: 120px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    margin: 0px;
+}
+.comment-name
+{
+    display: flex;
+    flex-flow: row-reverse;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.toggle-like-button
+{
+    color: black;
+}
+.post-toggle {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Transition on max-height property */
+}
+.show {
+    max-height: 6000px;
+    transition: max-height 0.3s ease /* Set a large enough value to accommodate all content */
+}
+.post-comment{
+    overflow-y: scroll;
+    max-height: 200px;
+}
+.timestamp{
+    font-size: x-small;
+    margin-left: 280px;
+}

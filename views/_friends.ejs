@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="friends.css">
+<section id="user-friends">
+    <h4>Friends</h4>
+    <% for(u of all_users){%>
+      <p>
+        <a href="/profile/<%= u.id %>">#<%= u.name%></a>
+      </p>
+    <%}
+    %>
+    </section>

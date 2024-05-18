@@ -1,10 +1,13 @@
-<%- include("./_header.ejs")%>
-<h1>Sign Up</h1>
-<form action="/create" method="post">
-<input type="text" name="email" placeholder="email" required>
-<input type="text" name="password" placeholder="password" required>
-<input type="text" name="confirm" placeholder="confirm" required>
-<input type="text" name="name" placeholder="name" required>
-<button type="submit">submit</button>
+<link rel="stylesheet" href="/sign_up.css">
+<div class="background">
+    <!-- Blurred Background Image -->
+    <img src="./img/signin1.jpg" alt="Background Image" height="830px" width="1350px">
+</div>
+<form action="/create" method="post" id="sign-up-form">
+    <h3>SIGN UP</h3>
+<input class="input" type="text" name="email" placeholder="Email" required>
+<input class="input" type="text" name="password" placeholder="Password" required>
+<input class="input" type="text" name="confirm" placeholder="Confirm" required>
+<input class="input" type="text" name="name" placeholder="Name" required>
+<button class="submit" type="submit">Submit</button>
 </form>    
-<%- include("./_footer.ejs")%>

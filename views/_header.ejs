@@ -3,6 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/comment.css">
+<link rel="stylesheet" href="/post.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" integrity="sha512-0p3K0H3S6Q4bEWZ/WmC94Tgit2ular2/n0ESdfEX8l172YyQj8re1Wu9s/HT9T/T2osUw5Gx/6pAZNk3UKbESw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title><%=title%></title>
 </head>
 <body> 
+  <!-- navbar -->
+<header class="navbar-div">
+  <nav>
+    <div class="logo">
+        <h1>LinkLeaf</h1>
+    </div>
+    <% if(locals.user) {%>
+      <div class="nav-links">
+        <li><a href="/profile/<%= locals.user._id %>">Profile</a></li>
+        <li><a href="#"><%= user.name %></a></li>
+        <li><a href="/sign-out">Sign Out</a></li>
+        <li><a href="/">Home</a></li>
+        <% }else{ %>
+        <div class="nav-links">
+          <li><a href="/sign-in"> Sign In</a></li>
+          <li><a href="/sign-up">Sign Up</a></li>
+          <li><a href="/">Home</a></li>
+        </div>
+        <% } %>
+</nav>
+</header>
+
+  
